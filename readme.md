@@ -74,19 +74,19 @@ The dataset contains historical Olympic athlete records including:
 
 ## key Findings
 
-## Athlete Participation Trend
+### Athlete Participation Trend
 - year_participant_count = df.groupby("Year")["ID"].nunique()
 
-## Sports with Most Events
+### Sports with Most Events
 - sport_event_count = df.groupby("Sport")["Event"].nunique()
 
-## Country with Most Medal Winners
+### Country with Most Medal Winners
 - most_medal_country = df["NOC"].value_counts().idxmax()
 
-## Average Athlete Age by Year
+### Average Athlete Age by Year
 - year_avg_age = df.groupby("Year")["Age"].mean()
 
-## Gold Medal Count by Country
+### Gold Medal Count by Country
 - country_gold_medals = (
     df[df["Medal"]=="Gold"]
       .groupby("NOC")["Medal"]
